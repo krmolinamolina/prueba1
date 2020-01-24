@@ -1,0 +1,397 @@
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+input {
+  /*borde de la caja de texto*/
+	outline: none;
+	border: none;
+}
+
+/*=====================Animaciones cajas de texto===========*/
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; }
+textarea:focus::-moz-placeholder { color:transparent; }
+textarea:focus:-ms-input-placeholder { color:transparent; }
+
+input::-webkit-input-placeholder { color: #fff;}
+input:-moz-placeholder { color: #fff;}
+input::-moz-placeholder { color: #fff;}
+input:-ms-input-placeholder { color: #fff;}
+
+textarea::-webkit-input-placeholder { color: #fff;}
+textarea:-moz-placeholder { color: #fff;}
+textarea::-moz-placeholder { color: #fff;}
+textarea:-ms-input-placeholder { color: #fff;}
+
+
+/*=================================================================*/
+button {
+	outline: none ;
+	border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ Utility ]*/
+.txt1 {
+  font-family: Poppins-Regular;
+  font-size: 17px;
+  color: #e5e5e5;
+  top: 5px;
+  line-height: 2;
+  text-decoration: underline;
+}
+.txt1:hover{
+  color: #000000; /*resaltar color con el cursor*/
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+/* ===================Fondo login============================*/
+.container-login {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1; 
+  opacity: 0.9; /*es transparencia*/
+}
+
+.container-login::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%; /*ancho del fondo*/
+  height: 100%; /*alto del fondo*/
+  top: 0;
+  left: 0;
+}
+/* ========================Contenido login===========================*/
+.wrap-login {
+  width: 320px; 
+  border-radius: 20px; /* borde redondeado*/  
+  padding: 40px 55px 37px 55px;
+ /* colores de login */
+  background: #ffffff;
+  background: -webkit-linear-gradient(top, rgba(0, 102, 91, 0.79), rgba(24, 86, 168, 0.9));
+  /*background: -o-linear-gradient(top, rgba(223, 121, 121, 0.733), #a050c5);
+  background: -moz-linear-gradient(top, #bbbb, #825d96);
+  background: linear-gradient(top, #bbbb, #bbbb);*/
+  
+}
+
+/*=================Form login======================*/
+
+.login-form {
+  width: 100%; /*porcentaje ocupado dentro login*/
+}
+/*=============Espaciado blanco para el logo=======*/
+.login-form-logo {
+  font-size: 0px;  /*tamaño del logo*/
+  color: #333333; /*color logo*/
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.login-form-title { /* Titulo Steel Planet*/
+  font-family: Poppins-Medium;
+  font-size: 30px;
+  color: #fff;
+  line-height: 0.8;
+  text-align: center;
+  text-transform: uppercase; /* Tipo de texto*/
+  display: block;
+}
+
+
+/*=================Cajas de texto===========================*/
+
+.wrap-input {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.20);  /* borde linea entrada*/
+  margin-bottom: 20px;
+}
+
+.input {
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1;
+  display: block;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  padding: 0 5px 0 28px;  /* espacio respecto al icono*/
+}
+
+/*---------------------------------------------*/ 
+
+.focus-input::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  background: #fff;
+}
+
+.focus-input::after {
+  font-family: Material-Design-Iconic-Font;
+  font-size: 22px;
+  color: #fff;
+
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  padding-left: 5px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+/*animacion de cajas de texto*/
+.input:focus {
+  padding-left: 5px;
+}
+
+.input:focus + .focus-input::after {
+  top: -5px;  /*distancia del icono  usuario*/
+  font-size: 15px;
+}
+
+.input:focus + .focus-input::before {
+  width: 100%;
+}
+
+.has-val.input + .focus-input::after {
+  top: -5px;
+  font-size: 15px;
+}
+
+.has-val.input + .focus-input::before {
+  width: 100%;
+}
+
+/*==============Checkbox===========*/
+
+.contact-form-checkbox {
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 35px;
+}
+
+.input-checkbox {
+  display: none;
+}
+
+.label-checkbox {
+  font-family: Poppins-Regular;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1;
+
+  display: block;
+  position: relative;
+  padding-left: 26px;
+}
+
+.label-checkbox::before {
+  content: "\f26b";
+  font-family: Material-Design-Iconic-Font;
+  font-size: 16px;
+  color: transparent;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+ /*tamaño caja checkbox*/
+  width: 17px; 
+  height: 17px;
+
+  border-radius: 3px;
+  background: #fff;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.input-checkbox:checked + .label-checkbox::before {
+  color: #333333;
+}
+
+
+/*======================Boton Ingresar========================*/
+.container-login-form-btn {
+  width: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.login-form-btn {
+  font-family: Poppins-Medium;
+  font-size: 20px;  /*tamaño letra del boton ingresar*/
+  color: #000000;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 120px;
+  height: 50px;
+  border-radius: 18px;
+  
+  background: #ffffff;
+  position: relative; /*posicion del boton dentro del login*/
+  z-index: 1;  
+}
+ /*color al hacer click en la boton*/
+button:active{
+  background:  #dddc86;
+  color:#ffffff !important;
+}
+
+.login-form-btn::before {
+  content: "";  /*mantener en sin formato la caja de texto*/
+  display: block;
+  position: absolute;
+  z-index: -1;  /*mantener el boton al frente*/
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  background-color: #ffffff;  /*Color inicial*/
+  opacity: 1;
+}
+
+.login-form-btn:hover { 
+  color: #00665B; /*Color del texto sobre el curso*/
+}
+
+.login-form-btn:hover:before {
+  opacity: 0;
+}
+/*=========================================================*/
+
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 576px) {
+  .wrap-login {
+    padding: 55px 15px 37px 15px;
+  }
+}
+
+/* ================================================================*/
+.password{
+  text-align: center;
+  padding-top: 12px;
+}
+
+
+.zmdi {
+  display: inline-block;
+  font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: normal;
+      font-stretch: normal;
+      font-size: 14px;
+      line-height: 1;
+      font-family: "Material-Design-Iconic-Font";
+      font-size-adjust: none;
+      font-kerning: auto;
+      
+      font-variant-alternates: normal;
+      font-variant-east-asian: normal;
+      font-variant-ligatures: normal;
+      font-variant-numeric: normal;
+      font-variant-position: normal;
+      font-language-override: normal;
+      font-feature-settings: normal;
+      
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.zmdi-landscape::before {
+    content: '\f18a';
+}
+
+.imagenfocus{
+  position: relative;
+  display: block; 
+  top: 0px;
+  height:80px;
+   width:85px;
+}

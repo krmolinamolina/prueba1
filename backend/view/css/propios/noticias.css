@@ -1,0 +1,25 @@
+
+.actualizarNoticia{
+    background-color: white;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    border-top: 5px solid #0493D3;
+}
+.actualizarNoticia .tituloNoticia{
+    color:#333;
+    font-size: 60px;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-align: center;
+
+}
+.actualizarNoticia .publicacion{
+    background-color: rgb(58, 58, 58);
+    margin-top: 8px;
+    font-size: 23px;
+    color: white;
+    border-radius: 1em;
+    text-align: center;
+   
+}
+

@@ -1,0 +1,2 @@
+//Colorpicker
+$('.my-colorpicker').colorpicker();

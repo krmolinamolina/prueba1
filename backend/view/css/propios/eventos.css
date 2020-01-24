@@ -1,0 +1,145 @@
+.tituloEvento{
+
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.evento .tituloNuevo{
+    background: #0493D3;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+.evento .portadaP{
+    font-size: 15px;
+    text-align: center;
+}
+
+.txtArea{
+
+    background: white;
+}
+
+.backColor2 {
+
+    background: #0493D3;
+}
+
+.backColor :hover{
+
+    background: #4d4d4d;
+}
+
+
+.grid0{
+    margin: 10px;
+}
+
+.grid0 li{
+    background-color: white;
+    
+    margin: 0px;
+    padding: 0px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.grid0 li figure{
+    margin: 0px;
+    padding: 0px;
+   
+    
+}
+
+
+
+
+.grid0 li img{
+    margin: 0px;
+    padding: 0px;
+}
+
+.cajaTitulo2{
+
+    height: 40px;
+}
+
+.tituloEvento2{
+    text-align: center;
+    text-transform: uppercase;
+    
+    font-weight: bold;
+    font-size: 20px;
+    color: #4d4d4d;
+   
+}
+
+.botonEvento button{
+    width: 180px;
+    margin-bottom: 10px;
+    background: #4d4d4d;
+    color: white;
+}
+
+.botonEvento :hover{
+    
+    background: gainsboro;
+    color: #4d4d4d;
+}
+
+.botonEvento{
+    margin-left: 50%;
+}
+
+/*=============================================
+actualizar evento
+=============================================*/
+.actualizarEvento{
+    background-color: white;
+}
+.actualizarEvento .fecha{
+  
+    color:rgb(43, 42, 42);
+    font-size: 25px;
+  
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-family: 'Source Code Pro', monospace;
+}
+.actualizarEvento .direccion{
+    text-transform: uppercase;
+    color:rgb(0, 0, 0);
+    font-size: 25px;
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    
+}
+
+.actualizarEvento .titulo{
+    text-transform: uppercase;
+    color:#333;
+    font-size: 60px;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-top: 0px;
+    padding-top: 0px;
+
+}
+
+/*=============================================
+ERROR 404
+=============================================*/
+
+.error404{
+    color:#333;
+   
+}
+.error404 h1{
+    font-size:300px;
+    text-shadow:8px 8px 1px #dadada;
+}
+
+
+
+
+

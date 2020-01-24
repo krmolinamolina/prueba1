@@ -1,0 +1,24 @@
+
+
+.wrapper h2{
+font-family:baloo;
+text-align: center;
+padding-top: 5%;
+text-transform: uppercase;
+font-size: 40px;
+}
+
+.owl-dot{
+    display: inline-block;
+    height: 15px !important;
+    width: 15px !important;
+    background-color: #000 !important;
+    border-radius: 50%;
+    margin: 0 5%;
+}
+.owl-dots{
+    text-align: center;
+}
+.owl-dot.active{
+    background-color: #7c9ee6 !important;
+}

@@ -1,0 +1,26 @@
+
+	#header .logo img{
+		width: 250px;
+	  padding-top: 0;
+	  margin-top: 0;
+	}
+
+	#header{
+		position:relative;
+	}
+	#header .container{
+		position:relative;
+	}
+    #header .row{
+		position:relative;
+	}
+
+	
+
+
+
+	#header .logotipo div{
+		position:absolute;
+		top: -37px;
+		right: 90px;
+	}
