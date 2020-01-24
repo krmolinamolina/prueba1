@@ -14,7 +14,7 @@
  require_once "../model/novedad.modelo.php";
  require_once "../model/slide.modelo.php";
  
- 
+ require_once "../model2/slide.modelo.php";
 
 
 
